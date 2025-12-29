@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f172a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Markdown styles */
+.prose {
+  @apply text-gray-300;
+}
+
+.prose h1 {
+  @apply text-2xl font-bold text-white mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-xl font-semibold text-white mt-6 mb-3;
+}
+
+.prose h3 {
+  @apply text-lg font-medium text-white mt-4 mb-2;
+}
+
+.prose p {
+  @apply my-3;
+}
+
+.prose ul, .prose ol {
+  @apply my-3 pl-6;
+}
+
+.prose li {
+  @apply my-1;
+}
+
+.prose a {
+  @apply text-blue-400 hover:text-blue-300 underline;
+}
+
+.prose code {
+  @apply bg-slate-800 px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-slate-800 p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-slate-600 pl-4 italic text-gray-400 my-4;
+}
+
+.prose table {
+  @apply w-full my-4;
+}
+
+.prose th, .prose td {
+  @apply border border-slate-700 px-3 py-2;
+}
+
+.prose th {
+  @apply bg-slate-800 font-semibold;
+}
+
+/* Animation for timeline */
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* Phase indicator colors */
+.phase-planning {
+  @apply bg-purple-500;
+}
+
+.phase-information_seeking {
+  @apply bg-blue-500;
+}
+
+.phase-reflection {
+  @apply bg-yellow-500;
+}
+
+.phase-cross_validation {
+  @apply bg-orange-500;
+}
+
+.phase-report_generation {
+  @apply bg-green-500;
+}
+
+.phase-completed {
+  @apply bg-emerald-500;
+}
+
+/* Authority tier badges */
+.authority-official {
+  @apply bg-emerald-600 text-white;
+}
+
+.authority-academic {
+  @apply bg-blue-600 text-white;
+}
+
+.authority-industry {
+  @apply bg-purple-600 text-white;
+}
+
+.authority-media {
+  @apply bg-orange-600 text-white;
+}
+
+.authority-other {
+  @apply bg-gray-600 text-white;
+}
+
+/* Status badges */
+.status-pending {
+  @apply bg-gray-600 text-gray-100;
+}
+
+.status-running {
+  @apply bg-blue-600 text-blue-100;
+}
+
+.status-succeeded {
+  @apply bg-green-600 text-green-100;
+}
+
+.status-failed {
+  @apply bg-red-600 text-red-100;
+}
+
+.status-cancelled {
+  @apply bg-yellow-600 text-yellow-100;
+}
+
+/* Claim status */
+.claim-supported {
+  @apply text-green-400;
+}
+
+.claim-refuted {
+  @apply text-red-400;
+}
+
+.claim-uncertain {
+  @apply text-yellow-400;
+}
+
+.claim-unverified {
+  @apply text-gray-400;
+}
